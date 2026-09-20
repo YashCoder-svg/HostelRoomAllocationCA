@@ -185,16 +185,17 @@ export default function HomePage() {
           {/* Heading */}
           <h1
             style={{
+              color: "#FFFFFF",
               fontSize: "clamp(2.25rem, 5.5vw, 4rem)",
               fontWeight: 900,
               lineHeight: 1.15,
               letterSpacing: "-0.03em",
               maxWidth: "920px",
               margin: "0 auto",
-              textShadow: "0 4px 12px rgba(0,0,0,0.5)",
+              textShadow: "0 4px 20px rgba(0,0,0,0.8), 0 1px 2px rgba(0,0,0,0.9)",
             }}
           >
-            Hostel Allotment, Solved by{" "}
+            <span style={{ color: "#FFFFFF" }}>Hostel Allotment, Solved by</span>{" "}
             <span className="hero-shimmer-sweep">Constraints, Not Chaos.</span>
           </h1>
 
@@ -279,9 +280,9 @@ export default function HomePage() {
             style={{
               fontSize: "0.6875rem",
               fontWeight: 600,
-              letterSpacing: "0.1em",
+              letterSpacing: "0.12em",
               textTransform: "uppercase",
-              color: "#475569",
+              color: "rgba(255, 255, 255, 0.75)",
               marginBottom: "0.35rem",
             }}
           >
@@ -292,13 +293,14 @@ export default function HomePage() {
               width: "28px",
               height: "28px",
               borderRadius: "50%",
-              backgroundColor: "#FFFFFF",
-              border: "1px solid #E2E8F0",
+              backgroundColor: "rgba(255, 255, 255, 0.15)",
+              backdropFilter: "blur(8px)",
+              border: "1px solid rgba(255, 255, 255, 0.25)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#F97316",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+              color: "#FDBA74",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
             }}
             className="animate-bounce"
           >
