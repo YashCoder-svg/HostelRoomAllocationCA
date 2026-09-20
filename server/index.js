@@ -20,7 +20,7 @@ app.get("/api/health", (req, res) => {
     status: "ok",
     service: "Hostel Allocation API",
     timestamp: new Date().toISOString(),
-    version: "1.0.0 (Week 5 Checkpoint)",
+    version: "1.0.0",
   });
 });
 

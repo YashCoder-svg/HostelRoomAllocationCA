@@ -34,7 +34,7 @@ App (RootLayout)
  �    +-- /warden (WardenPage)
  �         +-- WardenDashboard
  �              +-- MetricCounters (Capacity, Occupancy %, Queue Size)
- �              +-- Week9EngineNotice (Policy Engine Solver Roadmap)
+ �              +-- EngineNotice (Policy Engine Solver Roadmap)
  �              +-- AllocationTable
  �                   +-- StatusFilterToolbar
  �                   +-- SearchInput
@@ -137,7 +137,7 @@ erDiagram
 | **Server State (Hostels, Rooms, Beds)** | Fetched via REST API (`/api/hostels`, `/api/hostels/:id/rooms`) | Single source of truth in MongoDB. Eliminates client-side data staleness and supports real-time bed availability queries. |
 | **Warden Queue State** | Dynamic fetch (`/api/applications`, `/api/stats`) with live PATCH mutation | Enables wardens to review student applications, update workflow state (`UNDER_REVIEW` ? `ALLOCATED`), and recalculate dashboard counters. |
 | **Preference Ranking State** | Local React component state (`PreferenceRanker`) | Low latency, highly responsive reordering (1st, 2nd, 3rd choice). Only sent over network when the student completes validation and submits the entire application. |
-| **Role & Session Context** | `localStorage` backed React state (`RoleSwitcher`) | Enables zero-friction switching between **Student** (applicant) and **Warden** (administrator) viewports during demonstrations without complex auth ceremony in Week 5. |
+| **Role & Session Context** | `localStorage` backed React state (`RoleSwitcher`) | Enables zero-friction switching between **Student** (applicant) and **Warden** (administrator) viewports during demonstrations without complex auth ceremony. |
 | **Form Inputs & Wizard** | Controlled component state (`ApplicationForm`) | Instant feedback, validation, and optimistic receipt rendering upon HTTP 201 response. |
 
 ---

@@ -1,12 +1,12 @@
 # Policy-Driven Hostel Room Allocation Engine
 
 > **Academic Session 2026–2027 Residential Housing Management Platform**  
-> **WEEK 5 EVALUATION — FOUNDATION REVIEW (25 MARKS)**  
+> **FOUNDATION EVALUATION & ARCHITECTURE REVIEW (25 MARKS)**  
 > Target Stage-Gate Status: **GREEN — On Track**
 
 ---
 
-## 1. Week 5 Evaluation Alignment Matrix (25 Marks)
+## 1. Foundation Evaluation Alignment Matrix (25 Marks)
 
 | Parameter | Marks | Teacher Checks (Rubric Requirements) | Minimum Evidence in This Project | Project Implementation & Verification |
 | :--- | :---: | :--- | :--- | :--- |
@@ -15,7 +15,7 @@
 | **3. Rendering / Data Fetching** | **5** | • Core UI renders project data or realistic seed/mock data.<br>• Data-fetching approach identified & at least one representative interaction demonstrated.<br>• Loading/empty/error states considered where relevant.<br>• No hard-coded UI-only prototype where dynamic behaviour is expected. | Working screen + data/state evidence | • Dynamic client/server data fetching via REST API: `GET /api/hostels`, `GET /api/applications`, `GET /api/stats`.<br>• Interactive preference ranking toggles, room configuration pills, live capacity bars, and instant local state synchronization.<br>• Fallback graceful states and skeleton loaders. |
 | **4. Initial Backend & Database** | **3** | • Backend/API architecture defined for projects requiring persistence.<br>• Core entities/schema or data model documented.<br>• Minimal endpoint / database connection demonstrated.<br>• Explanation of how React communicates with server. | ER/data model + endpoint/schema/mock integration | • Express REST server running on port `5000` with CORS & rewrite proxy.<br>• In-memory MongoDB database auto-seeded with 4 Hostels, 72 Beds, and 5 Applications.<br>• Mongoose schemas for `Hostel`, `Block`, `Room`, `Bed`, `Student`, `Application`, `AllocationDraft`.<br>• Next.js communicates via HTTP `fetch` to Express REST endpoints. |
 | **5. Product Workflow** | **3** | • End-to-end primary user journey mapped.<br>• Roles and responsibilities reflected in design.<br>• At least one critical workflow clickable/demonstrable.<br>• Proposed implementation aligned with institutional problem. | Primary workflow walkthrough | • **Clickable End-to-End Workflow**: Student browses hostels → Selects & prioritizes ranked choices → Configures roommate roll pairing → Submits application → Application immediately updates in Warden review dashboard → Warden audits spatial bed map, checks compatibility, and verifies applicant. |
-| **6. Documentation** | **4** | • Problem statement, objectives and scope documented.<br>• Architecture / workflow diagram available.<br>• Feature backlog / module plan identifies what will be completed by Week 9 and Week 13.<br>• Setup/run instructions and team responsibilities. | README + backlog / milestone plan | • Comprehensive `README.md` and `docs/architecture.md`.<br>• System architecture & ER diagram.<br>• Clear Week 9 & Week 13 milestone backlog.<br>• Single-command run instruction (`npm run dev`). |
+| **6. Documentation** | **4** | • Problem statement, objectives and scope documented.<br>• Architecture / workflow diagram available.<br>• Feature backlog / module plan identifies what will be completed in Phase 2 and Phase 3.<br>• Setup/run instructions and team responsibilities. | README + backlog / milestone plan | • Comprehensive `README.md` and `docs/architecture.md`.<br>• System architecture & ER diagram.<br>• Clear Phase 2 & Phase 3 milestone backlog.<br>• Single-command run instruction (`npm run dev`). |
 | **TOTAL** | **25** | | | **Decision Target: GREEN — On Track** |
 
 ---
@@ -29,9 +29,9 @@ Hostel room allocation in collegiate institutions is conventionally conducted vi
 3. **Manual Administrative Bottlenecks**: Wardens spend weeks cross-referencing eligibility, CGPA rankings, and special medical accommodations.
 
 ### Objectives
-- **Phase 1 (Week 5 Checkpoint — Current)**: Establish the complete UI/UX foundation, component decomposition, Next.js routing, REST API communication, in-memory database connectivity, and the primary student-to-warden workflow.
-- **Phase 2 (Week 9 Milestone)**: Implement the deterministic constraint solver algorithm with roommate lifestyle compatibility scoring.
-- **Phase 3 (Week 13 Milestone)**: Finalize digital allotment letter generation with cryptographic QR verification, payment fee receipt integration, and analytics.
+- **Phase 1 (Foundation Review — Current)**: Establish the complete UI/UX foundation, component decomposition, Next.js routing, REST API communication, in-memory database connectivity, and the primary student-to-warden workflow.
+- **Phase 2 (Milestone 2)**: Implement the deterministic constraint solver algorithm with roommate lifestyle compatibility scoring.
+- **Phase 3 (Milestone 3)**: Finalize digital allotment letter generation with cryptographic QR verification, payment fee receipt integration, and analytics.
 
 ---
 
@@ -39,7 +39,7 @@ Hostel room allocation in collegiate institutions is conventionally conducted vi
 
 ```
 <RootLayout>
- ├── <DemoBanner />                     [Alert banner for Week 5 evaluation]
+ ├── <DemoBanner />                     [Alert banner for evaluation review]
  ├── <Navbar>                           [Header, Logo, Pill Nav, Persona Switcher]
  ├── <Main>
  │    ├── Route: / (Overview)

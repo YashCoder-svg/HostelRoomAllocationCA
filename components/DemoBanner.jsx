@@ -49,10 +49,10 @@ export default function DemoBanner() {
             <Sparkles size={12} />
           </span>
           <p style={{ margin: 0, fontSize: "0.75rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-            <span style={{ fontWeight: 800, color: "#9A3412" }}>Week 5 Foundation Review (25 Marks)</span>
+            <span style={{ fontWeight: 800, color: "#9A3412" }}>Demo Mode</span>
             <span style={{ margin: "0 0.4rem", color: "#FDBA74" }}>|</span>
             <span style={{ color: "#7C2D12" }}>
-              React.js / Next.js architecture, component decomposition, REST data-fetching, and Warden governance.
+              Seeded sample data, no real students. Auth disabled for evaluation.
             </span>
           </p>
         </div>

@@ -2,7 +2,7 @@
   "name": "hostel-room-allocation",
   "version": "1.0.0",
   "private": true,
-  "description": "Policy-Driven Hostel Allocation Engine - Week 5 Foundation",
+  "description": "Policy-Driven Hostel Allocation Engine - Architecture & Implementation",
   "scripts": {
     "dev": "concurrently -n \"NEXT,SERVER\" -c \"cyan,magenta\" \"npm run dev:client\" \"npm run dev:server\"",
     "dev:client": "next dev -p 3000",

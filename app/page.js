@@ -133,7 +133,7 @@ export default function HomePage() {
             inset: 0,
             zIndex: 1,
             background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(5,10,20,0.65) 40%, rgba(15,23,42,0.9) 75%, #F7F7F8 100%)",
+              "linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(5,10,20,0.55) 30%, rgba(10,15,25,0.85) 65%, rgba(15,23,42,0.95) 86%, #F7F7F8 100%)",
             pointerEvents: "none",
           }}
         />
@@ -192,10 +192,11 @@ export default function HomePage() {
               letterSpacing: "-0.03em",
               maxWidth: "920px",
               margin: "0 auto",
-              textShadow: "0 4px 20px rgba(0,0,0,0.8), 0 1px 2px rgba(0,0,0,0.9)",
             }}
           >
-            <span style={{ color: "#FFFFFF" }}>Hostel Allotment, Solved by</span>{" "}
+            <span style={{ color: "#FFFFFF", textShadow: "0 4px 20px rgba(0,0,0,0.9)" }}>
+              Hostel Allotment, Solved by
+            </span>{" "}
             <span className="hero-shimmer-sweep">Constraints, Not Chaos.</span>
           </h1>
 
